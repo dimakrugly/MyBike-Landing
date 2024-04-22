@@ -1,0 +1,47 @@
+.header {
+  background-image: url(./images/header-bg-hd.jpg);
+  background-size: cover;
+  background-position: 85%;
+  background-repeat: no-repeat;
+  height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include onTablet {
+    background-position: center;
+    height: 100vh;
+  }
+
+  &__title {
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    font-size: 36px;
+    line-height: 100%;
+    white-space: nowrap;
+    cursor: pointer;
+
+    @include hover(transform, scale(1.02));
+
+    @include onTablet {
+      font-size: 64px;
+    }
+
+    @include onDesktop {
+      font-size: 80px;
+    }
+  }
+
+  &__bottom {
+    padding-bottom: 88px;
+    @include contentPaddingInline;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+}
